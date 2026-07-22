@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { API_BASE } from "../api";
 
 /* ============================================================
    Tiny inline icon set (no external icon library, SVG only —
@@ -135,7 +136,7 @@ export default function Evaluation({ devMode = false }) {
 
   const fetchHistory = async () => {
     try {
-      const response = await fetch('/api/chat/history');
+      const response = await fetch(`${API_BASE}/api/chat/history`);
       const data = await response.json();
       setHistory(data);
       if (data.length > 0 && !selectedQuery) {
@@ -157,7 +158,7 @@ export default function Evaluation({ devMode = false }) {
       return;
     }
     try {
-      await fetch('/api/chat/history/clear', { method: 'POST' });
+      await fetch(`${API_BASE}/api/chat/history/clear`, { method: 'POST' });
       setHistory([]);
       setSelectedQuery(null);
     } catch (err) {

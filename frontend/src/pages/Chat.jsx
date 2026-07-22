@@ -1,3 +1,4 @@
+import { API_BASE } from "../api";
 import React, { useState, useEffect, useRef } from 'react';
 
 /* ============================================================
@@ -161,7 +162,7 @@ export default function Chat({ devMode }) {
     setLoading(true);
 
     try {
-      const response = await fetch('/api/chat/query', {
+      const response = await fetch(`${API_BASE}/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

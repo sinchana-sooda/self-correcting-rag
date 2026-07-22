@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { API_BASE } from "../api";
 
 export default function Settings() {
   const [retrievalK, setRetrievalK] = useState(4);
@@ -15,7 +16,7 @@ export default function Settings() {
     setSuccessMsg('');
     setErrorMsg('');
     try {
-      const response = await fetch('/api/chat/history/clear', {
+      const response = await fetch(`${API_BASE}/api/chat/history/clear`, { 
         method: 'POST'
       });
       if (response.ok) {
@@ -39,7 +40,7 @@ export default function Settings() {
     setErrorMsg('');
     try {
       // Fetch list of documents first
-      const docsResponse = await fetch('/api/documents');
+      const docsResponse = await fetch(`${API_BASE}/api/documents`);
       const docs = await docsResponse.json();
 
       // Delete each document

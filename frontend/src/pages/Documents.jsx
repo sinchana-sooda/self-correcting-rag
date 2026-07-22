@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { API_BASE } from "../api";
 
 /* ============================================================
    Tiny inline icon set (no external icon library, SVG only —
@@ -134,7 +135,7 @@ export default function Documents() {
 
   const fetchDocuments = async () => {
     try {
-      const response = await fetch('/api/documents');
+      const response = await fetch(`${API_BASE}/api/documents`);
       const data = await response.json();
       setDocuments(data);
     } catch (err) {
@@ -183,7 +184,7 @@ export default function Documents() {
     formData.append('file', file);
 
     try {
-      const response = await fetch('/api/documents/upload', {
+      const response = await fetch(`${API_BASE}/api/documents`, {
         method: 'POST',
         body: formData
       });

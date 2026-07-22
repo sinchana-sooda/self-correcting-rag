@@ -1,3 +1,4 @@
+import { API_BASE } from "../api";
 import React, { useState, useEffect } from 'react';
 
 /* ============================================================
@@ -118,11 +119,11 @@ export default function Dashboard({ setActiveTab }) {
     async function fetchData() {
       try {
         // Fetch documents
-        const docsResponse = await fetch('/api/documents');
+        const docsResponse = await fetch(`${API_BASE}/api/documents`);
         const docsData = await docsResponse.json();
 
         // Fetch chat history
-        const chatResponse = await fetch('/api/chat/history');
+        const chatResponse = await fetch(`${API_BASE}/api/chat/history`);
         const chatData = await chatResponse.json();
 
         // Calculate statistics
