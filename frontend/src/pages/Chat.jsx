@@ -162,7 +162,7 @@ export default function Chat({ devMode }) {
     setLoading(true);
 
     try {
-      const response = await fetch(`${API_BASE}/api/chat`, {
+      const response = await fetch(`${API_BASE}/api/chat/query`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -171,7 +171,9 @@ export default function Chat({ devMode }) {
       });
 
       if (!response.ok) {
-        throw new Error('Server responded with an error.');
+        const errorText = await response.text();
+        console.error("Backend Error:", errorText);
+        throw new Error(errorText);
       }
 
       const traceData = await response.json();
