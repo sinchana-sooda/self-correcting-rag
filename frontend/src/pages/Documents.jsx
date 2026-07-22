@@ -184,7 +184,7 @@ export default function Documents() {
     formData.append('file', file);
 
     try {
-      const response = await fetch(`${API_BASE}/api/documents`, {
+      const response = await fetch(`${API_BASE}/api/documents/upload`, {
         method: 'POST',
         body: formData
       });
