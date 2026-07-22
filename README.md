@@ -106,30 +106,35 @@ If retrieval quality is poor:
 When sufficient evidence still cannot be retrieved, the assistant requests clarification instead of generating unsupported information.
 
 ---
-#Screenshots
+# Screenshots
 
 
-#DASHBOARD
+# DASHBOARD
 
   
 <img width="1920" height="1020" alt="Screenshot 2026-07-22 173217" src="https://github.com/user-attachments/assets/5ffe66cb-147c-4e83-9b99-5fe55d628850" />
 
-#DOCUMENTS PAGE
+
+# DOCUMENTS PAGE
 
 
 <img width="1920" height="1020" alt="Screenshot 2026-07-22 173246" src="https://github.com/user-attachments/assets/35abb9cd-acb0-4d74-8724-eac3453e5431" />
 
-#CHAT PLAYGROUND
+
+# CHAT PLAYGROUND
 
 
 <img width="1920" height="1020" alt="Screenshot 2026-07-22 175217" src="https://github.com/user-attachments/assets/6768b984-6487-4b9b-bdba-76d82f5fc7ed" />
 
-#EVALUATION
+
+# EVALUATION
 
 
 <img width="1920" height="1020" alt="Screenshot 2026-07-22 175232" src="https://github.com/user-attachments/assets/8970d309-916c-4bb2-88ad-1bc998fbaa45" />
 
-#SETTINGS
+
+# SETTINGS
+
 
 <img width="1920" height="1020" alt="Screenshot 2026-07-22 175239" src="https://github.com/user-attachments/assets/6a5ac99d-1ea5-40d6-bd46-ab4d53bdd7e5" />
 
